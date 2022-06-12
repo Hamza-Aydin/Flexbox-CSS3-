@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Container-CSS3-</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            background-color: antiquewhite;
+            border: 1px red solid;
+            width: 200px;
+            margin: 10px;
+            height: 200px;
+        }
+        .container{
+            display: flex;/*bunu flex yaptığımız için normlade alt alta olan elementlerimiz yan yana geldi*/
+            flex-direction: row; /*satırca mı sutünca mı sıralanacağını seçiyoruz*/
+            justify-content: flex-start;/*konumlandırmanın main'de nerden başlayacağını belirtiyoruz*/
+            align-items:center;/*cross'da konumlandırma yapmamızı sağlar*/
+            width: 75%;       /*her element arasında eşit boşluk bırakmış oluyoruz(evenly)*/
+                              /*iki elaman köşelere yapıştırılır yine boşluklar olur(around)*/
+                              /*veya direkt center,start vs diyerek yan yana konumlandırılabilir*/
+                             /*bu bizim main axis'de konumlandırma yapmak için kullandığımız girdimizdi*/  
+            
+            min-height:600px;/*böylece gerekirse hight'ımız da büyüyebilir*/
+            background-color: #ddd;
+            margin: 0 auto;
+            flex-wrap:wrap;/*böylece elemanları tek satıra sığdırıp ölçüyü bozmak yerine alt satıra geçer*/
+/*eğer flex-direction'u column yapsaydık yatay ve düşey mantığı ters işlerdi başka bir fark yok*/            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>article 1</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 2</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 4</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 5</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 6</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 7</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 8</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 9</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 10</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>article 11</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>  
+    </div>
+</body>
+</html>

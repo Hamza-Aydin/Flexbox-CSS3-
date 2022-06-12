@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Items-CSS3-</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 75%;
+            min-height: 600px;
+            margin: 0 auto;
+            background-color: #ddd
+        }
+        .box{
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border: 2px blue solid;
+            border-radius: 4px;
+            margin: 10px;
+
+        }
+        .box-1{
+            order: 2; /*sayfaya grliş sıralarını değiştirebiliyoruz*/
+            background-color: blueviolet;
+            flex: 1;/*sadece buna verirsek boşlukları sadece bununla doldurur*/
+        }
+        .box-2{
+            order: 1;
+            /*align-self: flex-end;*//*normal işleyiş dışında kendine align atayabiliyoruz*/
+            background-color: crimson;
+            /*flex-grow: 2;*/
+        }
+        .box-3{
+            order: 3;
+            background-color: aquamarine;
+            flex: 1;/*flex-grow yerine direkt flex diye de verebiliriz*/
+            /*align-self: flex-start;*/
+            /*flex-grow: 3;*//*width değerlerini boşlukları dolduracak şekilde oransal olarak değiştirebiliyoruz*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+    </div>
+</body>
+</html>
